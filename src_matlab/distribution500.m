@@ -9,14 +9,15 @@ alpha7 = [24 108 161 110 55 32 10 0 0 0 0];
 alpha9 = [21 110 162 109 58 32 8 0 0 0 0]; 
 
 figure
-h1 = plot(x,alpha1,'-*red');  hold on;
-     plot(x,alpha3,'-*green');hold on;
-     plot(x,alpha5,'-*black');hold on;
-     plot(x,alpha7,'->green');hold on;
-     plot(x,alpha9,'->red');
+h1 = plot(x,alpha1,'-*red','LineWidth',1.2);  hold on;
+     plot(x,alpha3,'-*green','LineWidth',1.2);hold on;
+     plot(x,alpha5,'-*black','LineWidth',1.2);hold on;
+     plot(x,alpha7,'->green','LineWidth',1.2);hold on;
+     plot(x,alpha9,'->red','LineWidth',1.2);
      
 axis([0,10,0,165]);
-xlabel('Participation of Nodes');
-ylabel('Node numbers Distribution');
-legend('\alpha=0.1','\alpha=0.3','\alpha=0.5','\alpha=0.7','\alpha=0.9');
+xlabel('Participation of Nodes','FontWeight','bold');
+ylabel('Node numbers Distribution','FontWeight','bold');
+legend('\alpha=0.1','\alpha=0.3','\alpha=0.5','\alpha=0.7','\alpha=0.9','FontWeight','bold');
 grid on;
+print('distribution500','-dpng')

@@ -13,19 +13,20 @@ y1k20=[2220 3251 4326 5820 6720];
 y1k25=[2199 3316 4306 6365 7998];
 y1k30=[2057 3166 4302 6498 9197];
 figure
- h1 = plot(x,y0k10,'->blue'); hold on;
-      plot(x,y0k15,'->black');hold on;
-      plot(x,y0k20,'->c');    hold on;
-      plot(x,y0k25,'->red');  hold on;
-      plot(x,y0k30,'->green');
- h2 = plot(x,y1k10,'-*blue'); hold on;
-      plot(x,y1k15,'-*black');hold on;
-      plot(x,y1k20,'-*c');    hold on;
-      plot(x,y1k25,'-*red');   hold on;
-      plot(x,y1k30,'-*green');
+ h1 = plot(x,y0k10,'->blue','LineWidth',1.2); hold on;
+      plot(x,y0k15,'->black','LineWidth',1.2);hold on;
+      plot(x,y0k20,'->c','LineWidth',1.2);    hold on;
+      plot(x,y0k25,'->red','LineWidth',1.2);  hold on;
+      plot(x,y0k30,'->green','LineWidth',1.2);
+ h2 = plot(x,y1k10,'-*blue','LineWidth',1.2); hold on;
+      plot(x,y1k15,'-*black','LineWidth',1.2);hold on;
+      plot(x,y1k20,'-*c','LineWidth',1.2);    hold on;
+      plot(x,y1k25,'-*red','LineWidth',1.2);   hold on;
+      plot(x,y1k30,'-*green','LineWidth',1.2);
       
 grid on;
-xlabel('Number of Sub-task');
-ylabel('Total Cost');
-legend([h1,h2],'Direct Allocation of Tasks','Task Allocation with LCBPA','Location','Northwest');
+xlabel('Number of Sub-task','FontWeight','bold');
+ylabel('Total Cost','FontWeight','bold');
+legend([h1,h2],'Direct Allocation of Tasks','Task Allocation with LCBPA','Location','Northwest','FontWeight','bold');
+print('alpha0_5completetion','-dpng')
       
