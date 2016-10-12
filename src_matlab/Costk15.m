@@ -16,4 +16,6 @@ figure;
       
 xlabel('Weighing Factor \alpha','FontWeight','bold');
 ylabel('Total Cost','FontWeight','bold');
+legend('N=100','N=200','N=300','N=400','N=500','FontWeight','bold','Location','SouthEast');
 grid on;
+print('Costk15','-dpng')
